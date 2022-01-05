@@ -9,12 +9,13 @@ I used the brilliant r-track dactyl manuform variant, designed by u/qqurn who ha
 Because I am using huge bricks for batteries I had to design a wristrest which also houses the powerpacks. The design was quickly thrown together in tinkercad and is probably neither perfect nor finished.
 
 # To Do
-* port my keymap from qmk
+* port my keymap from qmk, partly done. mouse keys and traversal layer done, gaming and i3 layers missing.
 * map all leds to a somewhat more convenient array table, so I can address them
-* configure bluetooth, powersaving options (vcc enable and disable when rgb is toggled...)
-* configure how usb hid behaves together with bluetooth (button to choose, when usb is connected... how is second half connected. etc)
-  * I really would like the second half to communicate with the primary half over ble even if it is plugged in to charge...
 * the holy grail: somehow getting my shiny new pmw3360 sensor to work as a trackball...
+
+ZMK Firmware Features
+* vcc only enabled when rgb is enabled (might need to change this to get pmw3360 to work later)
+* ble working with linux, ble or usb can be toggled via keys
 
 # Bill of materials
 * 62x MxLEDBitPCB single switch pcbs
@@ -25,7 +26,7 @@ Because I am using huge bricks for batteries I had to design a wristrest which a
 * 66x kailh hotswap sockets
  * 66x diodes (4 diodes will need to be soldered directly to the hotswap sockets on the right thumb cluster)
 * one pmw3360 sensor breakoutboard for the trackball
-* Trackball (I chose a replacement ball for the Logitech Trackman Optical Trackball, will need to verify that this one fits) 
+* Trackball (perixx peripro/elecom trackball fits nicely)
 * 2x nice!nano microcontrollers (or promicro-c/elite-c if you don't want bluetooth)
 * 2x tiny buttons for the reset switches
 * 2x toggle switches to break power from the batteries to the MCUs

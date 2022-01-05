@@ -1,4 +1,7 @@
-on: [push, pull_request, workflow_dispatch]
+on: 
+  push:
+    paths-ignore:
+      - '**/README.md'
 
 name: Build
 

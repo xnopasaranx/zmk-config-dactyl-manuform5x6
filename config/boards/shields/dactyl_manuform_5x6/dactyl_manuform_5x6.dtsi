@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/led/led.h>
 
 / {
     chosen {
@@ -45,4 +46,21 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                   RC(3,11) RC(3,
             ;
 
     };
+    
+    led_strip: ws2812@0 {
+    compatible = "worldsemi,ws2812-spi";
+    label = "WS2812";
+
+    /* SPI */
+    reg = <0>; /* ignored, but necessary for SPI bindings */
+    spi-max-frequency = <4000000>;
+
+    /* WS2812 */
+    chain-length = <10>; /* number of LEDs */
+    spi-one-frame = <0x70>;
+    spi-zero-frame = <0x40>;
+    color-mapping = <LED_COLOR_ID_GREEN
+                     LED_COLOR_ID_RED
+                     LED_COLOR_ID_BLUE>;
+};
 };

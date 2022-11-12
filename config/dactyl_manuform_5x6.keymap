@@ -31,7 +31,7 @@
         lower_layer {
             bindings = <
                 &kp F12 &kp F1    &kp F2 &kp F3   &kp F4   &kp F5                &kp F6         &kp F7         &kp F8           &kp F9 &kp F10 &kp F11
-                &trans  &trans    &trans &trans   &trans   &trans                &mwh SCROLL_UP &mkp MCLK      &mwh SCROLL_DOWN &trans &trans  &trans
+                &rgb_ug RGB_TOG  &trans    &trans &trans   &trans   &trans                &mwh SCROLL_UP &mkp MCLK      &mwh SCROLL_DOWN &trans &trans  &trans
                 &trans  &trans    &trans &kp PG_UP   &kp UP   &kp PG_DN                &mkp LCLK      &mmv MOVE_UP   &mkp RCLK        &trans &trans  &trans
                 &trans  &kp RSHFT &trans &kp LEFT &kp DOWN &kp RIGHT             &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &trans &trans  &trans
                                   &trans &trans                                              &kp LALT &trans
